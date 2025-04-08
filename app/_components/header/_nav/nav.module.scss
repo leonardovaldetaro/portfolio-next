@@ -1,0 +1,119 @@
+@import '../../../styles/variables';
+@import '../../../styles/breakpoints';
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+  background: $dark-gray;
+  padding: .5em 1em;
+  border-radius: 25px; // Deixa o menu arredondado
+  border: 1px solid rgba(0, 135, 219, .2); // Adiciona uma borda ao menu
+  list-style: none;
+  gap: 24px;
+
+  @media (max-width: $desktop_sm) {
+    padding: 0;
+  }
+
+  &__item {
+    display: block;
+
+    @media (max-width: $desktop_sm) {
+      display: none;
+    }
+  }
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  font-size: .8em;
+  color: $text-menu-dark;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $text-complements;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0%;
+    height: 1px;
+    background: linear-gradient(
+      90deg, rgba(255, 106, 0, 0) 0%, 
+      rgba(50, 170, 255, .6) 50%, 
+      rgba(255, 106, 0, 0) 100%
+    );
+    border-radius: 5px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%; // Aparece ao passar o mouse
+  }
+}
+
+.mobileMenuToggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: $text-menu-dark;
+
+  @media (max-width: $desktop_sm) {
+    display: block;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    box-shadow: none;
+    padding: .5em 1em;
+
+    &:hover {
+      color: $link-hover; // Muda a cor ao passar o mouse
+    }
+  }
+}
+
+.menuOpenArrow {
+  display: flex;
+  align-items: center;
+  color: $text-menu-dark;
+  font-size: 1em;
+  gap: 8px;
+}
+
+// Aqui começa o menu mobile
+
+.overlay {
+  visibility: hidden; // Invisível por padrão
+  opacity: 0; // Transparente por padrão
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); // Escurece o fundo com opacidade
+  backdrop-filter: blur(8px); // Aplica o desfoque ao fundo
+  z-index: 9998; // Um nível abaixo do menu mobile
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; // Animação suave
+}
+
+.overlayActive {
+  visibility: visible; // Visível quando ativo
+  opacity: 1; // Opaco quando ativo
+}
