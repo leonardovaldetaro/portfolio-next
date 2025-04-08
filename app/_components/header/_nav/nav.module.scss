@@ -127,18 +127,14 @@
   position: fixed;
   top: 4.5em;
   right: 10%;
-  width: 60%;
+  width: 80%;
+  height: 80%;
   padding: 2em;
   background-color: $dark-gray;
   border-radius: 25px;
   z-index: 9999; // Acima do overlay
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9); // Sombra para destacar o menu
-
-  &.visible {
-    visibility: visible; // Visível quando ativo
-    opacity: 1; // Opaco quando ativo
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; // Animação suave
-  }
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; // Animação suave
 
   &__close {
     display: flex;
@@ -150,12 +146,11 @@
       display: flex;
       align-items: center;
       cursor: pointer;
-      background-color: $dark-black;
+      background-color: rgba(27, 43, 55, 1);
       border: 1px solid rgba(0, 135, 219, .2); // Borda do botão
-      border-radius: 25px; // Bordas arredondadas
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); // Sombra para destacar o botão
-      padding: 0.5em 1em;
-      column-gap: 8px;
+      border-radius: 8px; // Bordas arredondadas
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); // Sombra para destacar o botão
+      padding: 0.5em 0.5em;
       color: $text-menu-dark;
       font-size: 1em;
     }
@@ -171,4 +166,9 @@
       font-size: 1em;
     }
   }
+}
+
+.visible {
+  visibility: visible; // Visível quando ativo
+  opacity: 1; // Opaco quando ativo
 }

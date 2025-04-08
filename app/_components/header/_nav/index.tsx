@@ -71,13 +71,19 @@ export default function Nav() {
             })}
                 onClick={closeMenu} // Fecha o menu ao clicar no overlay
             ></div>
-            <nav className={Styles.mobileNavMenu}>
+
+            {/* Mobile Nav Menu */}
+            <nav
+                className={classNames({
+                    [Styles.mobileNavMenu]: true,
+                    [Styles.visible]: isOpen, // Exibe o menu quando isOpen é true
+                })}
+            >
                 <div className={Styles.mobileNavMenu__close}>
                     <button
                         className={Styles.mobileNavMenu__close__button}
                         onClick={closeMenu} // Fecha o menu ao clicar no botão de fechar
                     >
-                        Close
                         <MdClose className={Styles.mobileNavMenu__close__icon} />
                     </button>
                 </div>
