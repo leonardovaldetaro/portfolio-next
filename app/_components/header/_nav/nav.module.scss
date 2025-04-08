@@ -48,11 +48,9 @@
     bottom: -3px;
     width: 0%;
     height: 1px;
-    background: linear-gradient(
-      90deg, rgba(255, 106, 0, 0) 0%, 
-      rgba(50, 170, 255, .6) 50%, 
-      rgba(255, 106, 0, 0) 100%
-    );
+    background: linear-gradient(90deg, rgba(255, 106, 0, 0) 0%,
+        rgba(50, 170, 255, .6) 50%,
+        rgba(255, 106, 0, 0) 100%);
     border-radius: 5px;
     transform: translateX(-50%);
     transition: width 0.3s ease;
@@ -78,7 +76,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     border: none;
     box-shadow: none;
     padding: .5em 1em;
@@ -95,6 +93,11 @@
   color: $text-menu-dark;
   font-size: 1em;
   gap: 8px;
+
+  &__icon {
+    color: $text-menu-dark;
+    font-size: 1.5em;
+  }
 }
 
 // Aqui começa o menu mobile
@@ -107,8 +110,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); // Escurece o fundo com opacidade
-  backdrop-filter: blur(8px); // Aplica o desfoque ao fundo
+  background-color: rgba(0, 0, 0, 0.7); // Escurece o fundo com opacidade
+  backdrop-filter: blur(3px); // Aplica o desfoque ao fundo
   z-index: 9998; // Um nível abaixo do menu mobile
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; // Animação suave
 }
@@ -116,4 +119,56 @@
 .overlayActive {
   visibility: visible; // Visível quando ativo
   opacity: 1; // Opaco quando ativo
+}
+
+.mobileNavMenu {
+  visibility: hidden; // Invisível por padrão
+  opacity: 0; // Transparente por padrão
+  position: fixed;
+  top: 4.5em;
+  right: 10%;
+  width: 60%;
+  padding: 2em;
+  background-color: $dark-gray;
+  border-radius: 25px;
+  z-index: 9999; // Acima do overlay
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9); // Sombra para destacar o menu
+
+  &.visible {
+    visibility: visible; // Visível quando ativo
+    opacity: 1; // Opaco quando ativo
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; // Animação suave
+  }
+
+  &__close {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-bottom: 1em;
+
+    &__button {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background-color: $dark-black;
+      border: 1px solid rgba(0, 135, 219, .2); // Borda do botão
+      border-radius: 25px; // Bordas arredondadas
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); // Sombra para destacar o botão
+      padding: 0.5em 1em;
+      column-gap: 8px;
+      color: $text-menu-dark;
+      font-size: 1em;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 2em;
+
+    .link {
+      font-size: 1em;
+    }
+  }
 }

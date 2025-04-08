@@ -37,8 +37,8 @@ export default function Nav() {
                             <Link
                                 href={rota.to}
                                 className={`${Styles.link} ${hoveredItem === rota.label
-                                        ? Styles.active
-                                        : ""
+                                    ? Styles.active
+                                    : ""
                                     }`}
                                 onMouseEnter={() =>
                                     setHoveredItem(rota.label)
@@ -54,19 +54,43 @@ export default function Nav() {
                             className={Styles.mobileMenuToggle__button}
                             onClick={toggleMenu} // Alterna o estado do menu ao clicar no botão
                         >
-                            <span className={Styles.menuOpenArrow}>Menu | <MdKeyboardArrowDown size={30} color="#fff" /></span>
+                            <span className={Styles.menuOpenArrow}>
+                                Menu
+                                <MdKeyboardArrowDown
+                                    className={Styles.menuOpenArrow__icon}
+                                />
+                            </span>
                         </button>
                     </div>
                 </ul>
             </nav>
-            
+
             <div className={classNames({
                 [Styles.overlay]: true,
                 [Styles.overlayActive]: isOpen
             })}
                 onClick={closeMenu} // Fecha o menu ao clicar no overlay
             ></div>
-
+            <nav className={Styles.mobileNavMenu}>
+                <div className={Styles.mobileNavMenu__close}>
+                    <button
+                        className={Styles.mobileNavMenu__close__button}
+                        onClick={closeMenu} // Fecha o menu ao clicar no botão de fechar
+                    >
+                        Close
+                        <MdClose className={Styles.mobileNavMenu__close__icon} />
+                    </button>
+                </div>
+                <ul className={Styles.mobileNavMenu__list}>
+                    {menuItems.map((rota, index) => (
+                    <li className={Styles.mobileNavMenu__list__item} key={index}>
+                        <Link href={rota.to} className={Styles.link}>
+                            {rota.label}
+                        </Link>
+                    </li>
+                    ))}
+                </ul>
+            </nav>
         </>
     );
 }
