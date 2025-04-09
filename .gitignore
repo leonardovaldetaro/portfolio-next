@@ -136,4 +136,4 @@ dist
 .pnp.*
 
 # design folder
-.design
+/design/
