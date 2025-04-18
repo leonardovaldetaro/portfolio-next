@@ -1,0 +1,9 @@
+@import "../../styles/variables";
+@import "../../styles/breakpoints";
+
+.cardsSection {
+    display: flex;
+    flex-direction: column;
+    padding: 4em 0;
+    width: 100%;
+}

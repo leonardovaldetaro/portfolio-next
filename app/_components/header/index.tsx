@@ -1,7 +1,6 @@
 "use client"
 
 import LogoHeader from 'next/image';
-
 import Styles from './header.module.scss';
 import Link from 'next/link';
 import Nav from './_nav';
