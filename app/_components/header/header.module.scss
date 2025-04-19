@@ -2,12 +2,25 @@
 @import '../../styles/breakpoints';
 
 .header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out; // Animação suave para aparecer/desaparecer
+
     padding: 1em 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: 90%;
+    width: 100%;
+}
+
+.headerVisible {
+    transform: translateY(0); // Totalmente visível
+}
+
+.headerHidden {
+    transform: translateY(-100%); // Escondido fora da tela
 }
 
 .logoContainer {
@@ -16,7 +29,13 @@
     justify-content: center;
     width: 50px;
     height: 50px;
+    border-radius: 50%;
     background-color: $dark-black;
+    margin-left: 2.3em;
+
+    @media (min-width: $desktop_sm) {
+        margin-left: 8em;
+    }
 
 
     &__link {
@@ -29,6 +48,7 @@
             transform: scale(1.1);
             box-shadow: -1px 2px 10px rgba(0, 0, 0, .6);
         }
+
         &:focus {
             transform: scale(1.1);
             box-shadow: 0px 0px 0px rgba(0, 0, 0, .6);
@@ -61,7 +81,7 @@
         &__item {
             color: $text-titles-dark;
             font-size: .9em;
-            
+
             &:hover {
                 color: $link-hover;
                 cursor: pointer;

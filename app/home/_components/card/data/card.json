@@ -9,6 +9,17 @@
     "info": "Discover the beauty of the mountains with our comprehensive guide to hiking and outdoor adventures.",
     "date": "2025-04-14",
     "tag": "Adventure"
+  },
+
+  {
+    "id": "artigo2",
+    "thumbnail": "/images/thumbnails/card1-thumb.jpg",
+    "mainImage": "/images/main/card1-main.jpg",
+    "title": "Exploring the Mountains",
+    "shortDescription": "A journey through the breathtaking landscapes of the mountains.",
+    "description": "Join us as we explore the majestic mountains, uncovering hidden trails and stunning vistas. This article takes you on a journey through some of the most beautiful mountain ranges in the world.",
+    "info": "Discover the beauty of the mountains with our comprehensive guide to hiking and outdoor adventures.",
+    "date": "2025-04-14",
+    "tag": "Adventure"
   }
-  
 ]

@@ -1,2 +1,14 @@
 @import "../../../styles/variables";
 @import "../../../styles/breakpoints";
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 2em;
+    padding: 0 1em;
+    width: 100%;
+    height: 100vh;
+}
