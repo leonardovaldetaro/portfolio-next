@@ -14,7 +14,7 @@ export default function Header() {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            if (currentScrollY > lastScrollY && currentScrollY > 50) {
                 // Rolagem para baixo e passou 100px
                 setIsVisible(false);
             } else {

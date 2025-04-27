@@ -1,7 +1,7 @@
 [
   {
     "id": "artigo1",
-    "thumbnail": "/images/thumbnails/card1-thumb.jpg",
+    "thumbnail": "/assets/card1-thumb.jpeg",
     "mainImage": "/images/main/card1-main.jpg",
     "title": "Exploring the Mountains",
     "shortDescription": "A journey through the breathtaking landscapes of the mountains.",
@@ -13,7 +13,7 @@
 
   {
     "id": "artigo2",
-    "thumbnail": "/images/thumbnails/card1-thumb.jpg",
+    "thumbnail": "/assets/card1-thumb.jpeg",
     "mainImage": "/images/main/card1-main.jpg",
     "title": "Exploring the Mountains",
     "shortDescription": "A journey through the breathtaking landscapes of the mountains.",
