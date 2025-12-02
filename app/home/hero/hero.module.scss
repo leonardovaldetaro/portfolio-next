@@ -21,10 +21,12 @@
         letter-spacing: -.015em;
         color: $text-titles-dark;
         text-shadow: -2px 3px 0px rgba(0, 0, 0, .9);
+        padding: 0 10%;
 
         @media (max-width: $desktop_sm) {
             font-size: 2em;
             line-height: 40px;
+            padding: 0 5%;
         }
     }
 
@@ -33,8 +35,14 @@
         line-height: 1.75em;
         color: $text-body-dark;
         margin-top: 20px;
+        padding: 0 10%;
+
+        @media (max-width: $desktop_sm) {
+            padding: 0 5%;
+        }
     }
 }
+
 .socialmediaContainer {
     display: flex;
     flex-direction: row;
@@ -42,9 +50,11 @@
     color: $text-body-dark;
     margin-top: 1em;
     gap: 1.5em;
+    padding: 0 10%;
 
     @media (max-width: $desktop_sm) {
         gap: 1.5em;
+        padding: 0 5%;
     }
 
     &__link {
@@ -57,7 +67,7 @@
             width: 1.5em;
             height: 1.5em;
         }
-        
+
         &:hover {
             background-color: $card-hover;
             color: $text-complements;

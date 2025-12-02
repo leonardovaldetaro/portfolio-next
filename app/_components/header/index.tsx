@@ -38,18 +38,20 @@ export default function Header() {
                 isVisible ? Styles.headerVisible : Styles.headerHidden
             }`}
         >
-            <div className={Styles.logoContainer}>
-                <Link href="/" className={Styles.logoContainer__link}>
-                    <LogoHeader
-                        src="/assets/simbol.svg"
-                        alt="Logotype Symbol Leonardo Valdetaro Web Developer"
-                        width={50}
-                        height={50}
-                        className={Styles.logoContainer__img}
-                    />
-                </Link>
+            <div className={Styles.container}>
+                <div className={Styles.logoContainer}>
+                    <Link href="/" className={Styles.logoContainer__link}>
+                        <LogoHeader
+                            src="/assets/simbol.svg"
+                            alt="Logotype Symbol Leonardo Valdetaro Web Developer"
+                            width={50}
+                            height={50}
+                            className={Styles.logoContainer__img}
+                        />
+                    </Link>
+                </div>
+                <Nav />
             </div>
-            <Nav />
         </header>
     );
 }

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.89 45.89">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #e5f0f5;
+        stroke-miterlimit: 10;
+        stroke-width: .06px;
+      }
+
+      .cls-1, .cls-3 {
+        opacity: .35;
+      }
+
+      .cls-4 {
+        fill: #e5f0f5;
+      }
+
+      .cls-5 {
+        opacity: .1;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g class="cls-3">
+      <rect class="cls-1" x=".03" y="22.95" width="22.91" height="22.91" transform="translate(45.89 22.91) rotate(90)"/>
+      <g class="cls-3">
+        <path class="cls-2" d="M.03,45.86C.03,33.2,10.29,22.95,22.95,22.95"/>
+        <path class="cls-2" d="M.03,45.86c12.66,0,22.91-10.26,22.91-22.91"/>
+      </g>
+      <g class="cls-5">
+        <path class="cls-4" d="M22.95,23.7c-.41,0-.75-.34-.75-.75h.75v.75Z"/>
+        <path class="cls-4" d="M.03,45.11c.41,0,.75.34.75.75H.03v-.75Z"/>
+        <path class="cls-4" d="M.03,23.7c.41,0,.75-.34.75-.75H.03v.75Z"/>
+        <path class="cls-4" d="M22.95,45.11c-.41,0-.75.34-.75.75h.75v-.75Z"/>
+      </g>
+    </g>
+    <g class="cls-3">
+      <rect class="cls-1" x="22.95" y=".03" width="22.91" height="22.91" transform="translate(45.89 -22.91) rotate(90)"/>
+      <g class="cls-3">
+        <path class="cls-2" d="M22.95,22.95C22.95,10.29,33.2.03,45.86.03"/>
+        <path class="cls-2" d="M22.95,22.95c12.66,0,22.91-10.26,22.91-22.91"/>
+      </g>
+      <g class="cls-5">
+        <path class="cls-4" d="M45.86.78c-.41,0-.75-.34-.75-.75h.75v.75Z"/>
+        <path class="cls-4" d="M22.95,22.2c.41,0,.75.34.75.75h-.75v-.75Z"/>
+        <path class="cls-4" d="M22.95.78c.41,0,.75-.34.75-.75h-.75v.75Z"/>
+        <path class="cls-4" d="M45.86,22.2c-.41,0-.75.34-.75.75h.75v-.75Z"/>
+      </g>
+    </g>
+    <g class="cls-3">
+      <rect class="cls-1" x=".03" y=".03" width="22.91" height="22.91" transform="translate(0 22.98) rotate(-90)"/>
+      <g class="cls-3">
+        <path class="cls-2" d="M.03.03C.03,12.69,10.29,22.95,22.95,22.95"/>
+        <path class="cls-2" d="M.03.03c12.66,0,22.91,10.26,22.91,22.91"/>
+      </g>
+      <g class="cls-5">
+        <path class="cls-4" d="M22.95,22.2c-.41,0-.75.34-.75.75h.75v-.75Z"/>
+        <path class="cls-4" d="M.03.78C.45.78.78.45.78.03H.03v.75Z"/>
+        <path class="cls-4" d="M.03,22.2c.41,0,.75.34.75.75H.03v-.75Z"/>
+        <path class="cls-4" d="M22.95.78c-.41,0-.75-.34-.75-.75h.75v.75Z"/>
+      </g>
+    </g>
+    <g class="cls-3">
+      <rect class="cls-1" x="22.95" y="22.95" width="22.91" height="22.91" transform="translate(0 68.81) rotate(-90)"/>
+      <g class="cls-3">
+        <path class="cls-2" d="M22.95,22.95c0,12.66,10.26,22.91,22.91,22.91"/>
+        <path class="cls-2" d="M22.95,22.95c12.66,0,22.91,10.26,22.91,22.91"/>
+      </g>
+      <g class="cls-5">
+        <path class="cls-4" d="M45.86,45.11c-.41,0-.75.34-.75.75h.75v-.75Z"/>
+        <path class="cls-4" d="M22.95,23.7c.41,0,.75-.34.75-.75h-.75v.75Z"/>
+        <path class="cls-4" d="M22.95,45.11c.41,0,.75.34.75.75h-.75v-.75Z"/>
+        <path class="cls-4" d="M45.86,23.7c-.41,0-.75-.34-.75-.75h.75v.75Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

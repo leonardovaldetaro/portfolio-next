@@ -1,25 +1,49 @@
 [
   {
-    "id": "artigo1",
-    "thumbnail": "/assets/card1-thumb.jpeg",
-    "mainImage": "/images/main/card1-main.jpg",
-    "title": "Exploring the Mountains",
-    "shortDescription": "A journey through the breathtaking landscapes of the mountains.",
-    "description": "Join us as we explore the majestic mountains, uncovering hidden trails and stunning vistas. This article takes you on a journey through some of the most beautiful mountain ranges in the world.",
-    "info": "Discover the beauty of the mountains with our comprehensive guide to hiking and outdoor adventures.",
-    "date": "2025-04-14",
-    "tag": "Adventure"
+    "id": "project-1",
+    "title": "Marco Rodrigues Coaching institutional website",
+    "shortDescription": "Clear and objective platform that showcases services and strengthens the brand’s digital presence.",
+    "thumbnail": "/assets/marco-rodrigues.webp",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "SASS"
+    ],
+    "repoUrl": "https://github.com/leonardovaldetaro/marco-rodrigues",
+    "demoUrl": "https://marcorodriguescoaching.pt/"
   },
-
   {
-    "id": "artigo2",
-    "thumbnail": "/assets/card1-thumb.jpeg",
-    "mainImage": "/images/main/card1-main.jpg",
-    "title": "Exploring the Mountains",
-    "shortDescription": "A journey through the breathtaking landscapes of the mountains.",
-    "description": "Join us as we explore the majestic mountains, uncovering hidden trails and stunning vistas. This article takes you on a journey through some of the most beautiful mountain ranges in the world.",
-    "info": "Discover the beauty of the mountains with our comprehensive guide to hiking and outdoor adventures.",
-    "date": "2025-04-14",
-    "tag": "Adventure"
+    "id": "project-2",
+    "title": "Zven Sport Underwear ecommerce website",
+    "shortDescription": "Modern and efficient store that highlights performance apparel and delivers a smooth shopping experience.",
+    "thumbnail": "/assets/zevnusa.webp",
+    "technologies": [
+      "Shopify",
+      "Liquid",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JSON",
+      "REST APIs"
+    ],
+    "repoUrl": "",
+    "demoUrl": "https://zevnusa.com/"
+  },
+  {
+    "id": "project-3",
+    "title": "Costa Fria restaurant website",
+    "shortDescription": "Fresh and minimal interface that showcases the menu and highlights the restaurant’s coastal identity.",
+    "thumbnail": "/assets/costafria.webp",
+    "technologies": [
+      "React.js",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Sass"
+    ],
+    "repoUrl": "https://github.com/leonardovaldetaro/costafria",
+    "demoUrl": "https://costafria.vercel.app/"
   }
 ]

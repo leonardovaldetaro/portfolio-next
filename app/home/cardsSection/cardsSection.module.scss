@@ -4,6 +4,38 @@
 .cardsSection {
     display: flex;
     flex-direction: column;
-    row-gap: 2em;
-    width: 100%;
+    gap: 2rem;
+    width: 75%;
+    padding: 2rem 0;
+
+    @media (max-width: $tablet) {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &__title {
+            font-size: 1.5em;
+            line-height: 50px;
+            font-weight: 900;
+            letter-spacing: -.015em;
+            color: $text-titles-dark;
+            text-shadow: -1px 2px 0px rgba(0, 0, 0, .9);
+
+            @media (max-width: $desktop_sm) {
+                font-size: 2em;
+                line-height: 40px;
+            }
+        }
+
+        &__description {
+            font-size: 1em;
+            line-height: 1.75em;
+            color: $text-body-dark;
+        }
+    }
 }

@@ -110,7 +110,9 @@ section {
 }
 
 body {
-	background-color: rgba(15, 21, 26, 1);
+	background: url('/assets/patern.svg') repeat,
+		rgb(16, 28, 37);
+	background-size: 80px 80px, cover;
 	font-family: "Roboto", sans-serif;
 	line-height: 1;
 	display: flex;
@@ -145,9 +147,10 @@ table {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 90%;
+	width: 100%;
 }
 
 .no-scroll {
-	overflow: hidden; /* Prevent scrolling */
-  }
+	overflow: hidden;
+	/* Prevent scrolling */
+}

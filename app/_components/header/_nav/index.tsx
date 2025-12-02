@@ -4,6 +4,7 @@ import { useState } from "react";
 import Styles from "./nav.module.scss";
 import Link from "next/link";
 import classNames from "classnames";
+import LogoHeader from "next/image";
 import { MdKeyboardArrowDown, MdClose } from "react-icons/md";
 
 export default function Nav() {
@@ -22,6 +23,7 @@ export default function Nav() {
     };
 
     const menuItems = [
+        { label: "Home", to: "/" },
         { label: "About", to: "/about" },
         { label: "Projects", to: "/projects" },
         { label: "Posts", to: "/posts" },
@@ -79,23 +81,39 @@ export default function Nav() {
                     [Styles.visible]: isOpen, // Exibe o menu quando isOpen é true
                 })}
             >
-                <div className={Styles.mobileNavMenu__close}>
-                    <button
-                        className={Styles.mobileNavMenu__close__button}
-                        onClick={closeMenu} // Fecha o menu ao clicar no botão de fechar
-                    >
-                        <MdClose className={Styles.mobileNavMenu__close__icon} />
-                    </button>
+                <div className={Styles.mobileNavMenu__header}>
+                    <div className={Styles.logoContainer}>
+                        <Link href="/" className={Styles.logoContainer__link} onClick={closeMenu}>
+                            <LogoHeader
+                                src="/assets/simbol.svg"
+                                alt="Logotype Symbol Leonardo Valdetaro Web Developer"
+                                width={50}
+                                height={50}
+                                className={Styles.logoContainer__img}
+                            />
+                        </Link>
+                    </div>
+                    <div className={Styles.mobileNavMenu__close}>
+                        <button
+                            className={Styles.mobileNavMenu__close__button}
+                            onClick={closeMenu} // Fecha o menu ao clicar no botão de fechar
+                        >
+                            <MdClose className={Styles.mobileNavMenu__close__icon} />
+                        </button>
+                    </div>
                 </div>
                 <ul className={Styles.mobileNavMenu__list}>
                     {menuItems.map((rota, index) => (
-                    <li className={Styles.mobileNavMenu__list__item} key={index}>
-                        <Link href={rota.to} className={Styles.link}>
-                            {rota.label}
-                        </Link>
-                    </li>
+                        <li className={Styles.mobileNavMenu__list__item} key={index}>
+                            <Link href={rota.to} className={Styles.link}>
+                                {rota.label}
+                            </Link>
+                        </li>
                     ))}
                 </ul>
+                <footer className={Styles.mobileNavMenu__footer}>
+                    <p>© {new Date().getFullYear()} Leonardo Valdetaro. All rights reserved.</p>
+                </footer>
             </nav>
         </>
     );
