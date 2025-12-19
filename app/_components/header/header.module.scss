@@ -34,10 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: $dark-black;
+    gap: 1em;
 
     &__link {
         transition: transform 0.4s ease;
@@ -61,6 +58,14 @@
     &__img {
         width: 50px;
         height: 50px;
+    }
+
+    &__name {
+
+        font-size: 1.5em;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $text-titles-dark;
     }
 }
 

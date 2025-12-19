@@ -34,9 +34,8 @@ export default function Header() {
 
     return (
         <header
-            className={`${Styles.header} ${
-                isVisible ? Styles.headerVisible : Styles.headerHidden
-            }`}
+            className={`${Styles.header} ${isVisible ? Styles.headerVisible : Styles.headerHidden
+                }`}
         >
             <div className={Styles.container}>
                 <div className={Styles.logoContainer}>
@@ -49,6 +48,7 @@ export default function Header() {
                             className={Styles.logoContainer__img}
                         />
                     </Link>
+                    <span className={Styles.logoContainer__name}>Leonardo<br />Valdetaro</span>
                 </div>
                 <Nav />
             </div>

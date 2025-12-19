@@ -1,47 +1,28 @@
 @import '../app/styles/variables';
+@import '../app/styles/breakpoints';
 
-.sectionHero {
-    background-image: url('/assets/background-hero.webp');
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+%baseSection {
     display: flex;
     flex-direction: column;
+    width: 90%;
+    max-width: 1440px;
+}
+
+.sectionHero {
+    @extend %baseSection;
     align-items: center;
     justify-content: center;
     padding: 9em 0 4em;
-    width: 100%;
-    max-width: 1440px;
 }
 
-.sectionCards {
-    display: flex;
-    flex-direction: column;
-    padding: 2em 0 0;
-    width: 90%;
-    max-width: 1440px;
-}
-
+.sectionCards,
 .sectionCta {
-    display: flex;
-    flex-direction: column;
+    @extend %baseSection;
     padding: 2em 0 0;
-    width: 90%;
-    max-width: 1440px;
 }
 
-.sectionAbout {
-    display: flex;
-    flex-direction: column;
-    padding: 2em 0;
-    width: 90%;
-    max-width: 1440px;
-}
-
+.sectionAbout,
 .sectionRecents {
-    display: flex;
-    flex-direction: column;
+    @extend %baseSection;
     padding: 2em 0;
-    width: 90%;
-    max-width: 1440px;
 }
