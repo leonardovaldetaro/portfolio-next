@@ -4,7 +4,7 @@
 .navbar {
   display: flex;
   justify-content: center;
-  margin-right: 2.3em;
+  margin-right: 1em;
 
   @media (min-width: $desktop_sm) {
     margin-right: 8em;
@@ -13,10 +13,10 @@
 
 .menu {
   display: flex;
-  background: $dark-gray;
+  background: $menu-dark-bg;
   padding: .5em 1em;
   border-radius: 25px;
-  border: 1px solid rgba(0, 135, 219, .2);
+  border: 1px solid rgba(17, 217, 160, .4);
   list-style: none;
   gap: 24px;
 
@@ -39,8 +39,9 @@
   color: $text-menu-dark;
   transition: color 0.3s ease;
 
-  &:hover {
-    color: $text-complements;
+  &:hover,
+  &.active {
+    color: $base-color-eletric;
   }
 
   &::after {
@@ -51,22 +52,23 @@
     width: 0%;
     height: 1px;
     background: linear-gradient(90deg, rgba(255, 106, 0, 0) 0%,
-        rgba(50, 170, 255, .6) 50%,
+        $base-color-eletric 50%,
         rgba(255, 106, 0, 0) 100%);
     border-radius: 5px;
     transform: translateX(-50%);
     transition: width 0.3s ease;
   }
 
-  &:hover::after {
-    width: 100%; // Aparece ao passar o mouse
+  &:hover::after,
+  &.active::after {
+    width: 100%; // Aparece ao passar o mouse ou estar ativo
   }
 }
 
 .mobileMenuToggle {
   display: none;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 1em;
   color: $text-menu-dark;
 
   @media (max-width: $desktop_sm) {
@@ -93,7 +95,8 @@
   display: flex;
   align-items: center;
   color: $text-menu-dark;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: 500;
   gap: 8px;
 
   &__icon {
@@ -155,7 +158,7 @@
       align-items: center;
       cursor: pointer;
       background-color: rgba(27, 43, 55, 1);
-      border: 1px solid rgba(0, 135, 219, .2); // Borda do botão
+      border: 1px solid rgba(17, 217, 160, .4); // Borda do botão
       border-radius: 8px; // Bordas arredondadas
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); // Sombra para destacar o botão
       padding: 0.5em 0.5em;
@@ -171,7 +174,8 @@
     row-gap: 2em;
 
     .link {
-      font-size: 1em;
+      font-size: 1.2em;
+      font-weight: 500;
     }
   }
 
@@ -183,7 +187,7 @@
     margin-top: 4em;
 
     p {
-      color: $text-menu-dark;
+      color: $base-color-eletric;
       font-size: .8em;
       font-style: italic;
       font-weight: 300;

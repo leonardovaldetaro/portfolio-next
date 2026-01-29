@@ -1,0 +1,128 @@
+@use '../../styles/variables' as var;
+@use '../../styles/breakpoints' as bp;
+@use '../../styles/mixins' as mix;
+
+// Para uso no formulário
+.button {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 0.5rem;
+    color: var.$dark-gray;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0.25em 1.5em;
+    background: var.$verde-eletrico;
+    border-radius: 8px;
+    border: 1px solid rgb(147, 255, 178);
+    transition:
+        background-color 0.2s ease-out,
+        box-shadow 0.2s ease-out,
+        transform 0.15s ease-out;
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+
+        svg {
+            transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform;
+            display: inline-block;
+        }
+    }
+
+    @include mix.buttonCta-hover;
+}
+
+// Para uso em fundo claro
+.button__primary {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 0.5rem;
+    color: var.$dark-gray;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    background: var.$verde-eletrico;
+    border-radius: 8px;
+    border: 1px solid rgb(147, 255, 178);
+    transition:
+        background-color 0.2s ease-out,
+        box-shadow 0.2s ease-out,
+        transform 0.15s ease-out;
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+
+        svg {
+            transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform;
+            display: inline-block;
+        }
+    }
+
+    @include mix.buttonCta-hover;
+
+}
+
+// Para uso em fundo escuro
+.button__secondary {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 0.5rem;
+    color: var.$dark-gray;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.25em 1.5em;
+    background: var.$verde-eletrico;
+    border-radius: 8px;
+    border: 1px solid rgb(147, 255, 178);
+    transition:
+        background-color 0.2s ease-out,
+        box-shadow 0.2s ease-out,
+        transform 0.15s ease-out;
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+
+        svg {
+            transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform;
+            display: inline-block;
+        }
+    }
+
+    @include mix.buttonCta-hover;
+}
+
+/* keyframes para o pulo à direita */
+@keyframes jump-right {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0.35rem);
+    }
+
+    50% {
+        transform: translateX(0.35rem);
+    }
+
+    75% {
+        transform: translateX(0.35rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

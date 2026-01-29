@@ -3,11 +3,14 @@
 import { useState } from "react";
 import Styles from "./nav.module.scss";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import classNames from "classnames";
 import LogoHeader from "next/image";
 import { MdKeyboardArrowDown, MdClose } from "react-icons/md";
 
 export default function Nav() {
+    const pathname = usePathname();
+
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
     const [isActive, setActive] = useState(false);
@@ -26,9 +29,8 @@ export default function Nav() {
         { label: "Home", to: "/" },
         { label: "About", to: "/about" },
         { label: "Projects", to: "/projects" },
-        { label: "Posts", to: "/posts" },
+        { label: "Posts", to: "/blog" },
         { label: "Contact", to: "/contact" },
-        { label: "Resume", to: "/resume" },
     ];
     return (
         <>
@@ -38,7 +40,7 @@ export default function Nav() {
                         <li className={Styles.menu__item} key={index}>
                             <Link
                                 href={rota.to}
-                                className={`${Styles.link} ${hoveredItem === rota.label
+                                className={`${Styles.link} ${pathname === rota.to || hoveredItem === rota.label
                                     ? Styles.active
                                     : ""
                                     }`}
@@ -105,7 +107,7 @@ export default function Nav() {
                 <ul className={Styles.mobileNavMenu__list}>
                     {menuItems.map((rota, index) => (
                         <li className={Styles.mobileNavMenu__list__item} key={index}>
-                            <Link href={rota.to} className={Styles.link}>
+                            <Link href={rota.to} className={Styles.link} onClick={closeMenu}>
                                 {rota.label}
                             </Link>
                         </li>

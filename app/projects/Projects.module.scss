@@ -1,0 +1,29 @@
+@use "../styles/variables" as var;
+@use "../styles/breakpoints" as bp;
+@use "../styles/mixins" as mix;
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1440px;
+    padding: 8em 0 2em;
+
+    &__hero {
+        margin-bottom: 4em;
+    }
+
+    &__projects {
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            font-size: var.$subtitle;
+            font-weight: 900;
+            letter-spacing: -.015em;
+            color: var.$text-titles-dark;
+            text-shadow: -1px 2px 0px rgba(0, 0, 0, .9);
+            margin-bottom: .5em;
+        }
+    }
+}

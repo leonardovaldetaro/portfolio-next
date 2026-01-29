@@ -1,0 +1,45 @@
+@use '../styles/variables' as var;
+@use '../styles/breakpoints' as bp;
+
+.mainBlogPage {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1440px;
+    padding: 8em 0 2em;
+    gap: 2rem;
+
+    @media (max-width: bp.$tablet) {
+        gap: 1rem;
+    }
+
+    &__title {
+        font-size: var.$title;
+        line-height: 50px;
+        font-weight: 900;
+        letter-spacing: -.015em;
+        color: var.$text-titles-dark;
+        text-shadow: -2px 3px 0px rgba(0, 0, 0, .9);
+        max-width: 50%;
+
+        @media (max-width: bp.$desktop_sm) {
+            font-size: 2em;
+            line-height: 40px;
+            max-width: 100%;
+        }
+    }
+
+    &__description {
+        font-size: var.$textBody;
+        line-height: 1.5em;
+        color: var.$text-body-dark;
+        max-width: 50%;
+
+        @media (max-width: bp.$desktop_sm) {
+            padding: 0 0%;
+            max-width: 100%;
+            margin-top: 0em;
+            margin-bottom: 1em;
+        }
+    }
+}

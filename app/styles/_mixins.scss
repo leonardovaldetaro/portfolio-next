@@ -1,0 +1,17 @@
+// Button CTA Hover Mixin
+@mixin buttonCta-hover($bg: rgba(42, 191, 176, 1),
+    $color: rgb(30, 48, 61),
+    $translateY: -2px,
+    $shadow: 0 4px 15px rgba(0, 0, 0, 0.6)) {
+    &:hover {
+        background-color: $bg;
+        color: $color;
+        transform: translateY($translateY);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+
+        svg {
+            animation: jump-right 700ms cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+            color: rgb(30, 48, 61);
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@use "../styles/variables" as var;
+@use "../styles/breakpoints" as bp;
+@use "../styles/mixins" as mix;
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1440px;
+    padding: 8em 0 2em;
+
+    &__title {
+        font-size: var.$title;
+        line-height: 50px;
+        font-weight: 900;
+        letter-spacing: -.015em;
+        color: var.$text-titles-dark;
+        text-shadow: -2px 3px 0px rgba(0, 0, 0, .9);
+    }
+}

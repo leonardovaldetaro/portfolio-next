@@ -11,7 +11,7 @@ export default function Card(props: Props) {
 
   return (
     <article className={Styles.card}>
-      <div className={Styles.imageContainer}>
+      <figure className={Styles.imageContainer}>
         <Image
           src={thumbnail}
           alt={title}
@@ -19,7 +19,7 @@ export default function Card(props: Props) {
           height={1000}
           sizes="(max-width: 768px) 100vw, 25vw"
         />
-      </div>
+      </figure>
 
       <div className={Styles.content}>
         <h2 className={Styles.title}>{title}</h2>

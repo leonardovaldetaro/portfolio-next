@@ -48,7 +48,6 @@ export default function Header() {
                             className={Styles.logoContainer__img}
                         />
                     </Link>
-                    <span className={Styles.logoContainer__name}>Leonardo<br />Valdetaro</span>
                 </div>
                 <Nav />
             </div>

@@ -13,6 +13,10 @@
   --color-text-default: #e6e6e6;
   --color-text-muted: #949494;
 
+  --dark-gray: rgb(20, 32, 41);
+  --base-color-eletric: rgba(17, 217, 160, 1);
+  --hover-color-eletric: rgba(42, 191, 176, 1);
+
   --font-family-body: "Work Sans", system-ui, sans-serif;
   --font-family-display: "IBM Plex Serif", system-ui, sans-serif;
 }
@@ -136,25 +140,28 @@ fieldset {
 }
 
 .fs-button {
-  background-color: var(--color-primary);
+  background-color: var(--base-color-eletric);
   border-radius: 0.375rem;
-  color: white;
+  color: var(--dark-gray);
   cursor: pointer;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
   line-height: 1rem;
   padding: 1rem 2rem;
-  transition-duration: 200ms;
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    background-color 0.2s ease-out,
+    box-shadow 0.2s ease-out,
+    transform 0.15s ease-out;
 }
 
 .fs-button:hover {
-  background-color: var(--color-primary-active);
+  background-color: var(--hover-color-eletric);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
 .fs-button:focus-visible {
-  background-color: var(--color-primary-active);
+  background-color: var(--hover-color-eletric);
   outline: 3px solid var(--color-highlight);
 }
 
@@ -197,7 +204,7 @@ fieldset {
   display: flex;
 }
 
-:is(.fs-checkbox-field, .fs-radio-field) .fs-label + .fs-description {
+:is(.fs-checkbox-field, .fs-radio-field) .fs-label+.fs-description {
   margin-top: 0.125rem;
 }
 
@@ -277,7 +284,8 @@ fieldset {
 
 .fs-slider::-moz-range-thumb {
   background-color: var(--color-primary);
-  border: none; /* Removes extra border that FF applies */
+  border: none;
+  /* Removes extra border that FF applies */
   border-radius: 50%;
   height: 1.25rem;
   width: 1.25rem;
@@ -288,7 +296,8 @@ fieldset {
   background-color: var(--color-primary);
   border-radius: 50%;
   height: 1.25rem;
-  margin-top: -0.375rem; /* Centers thumb on the track */
+  margin-top: -0.375rem;
+  /* Centers thumb on the track */
   width: 1.25rem;
 }
 

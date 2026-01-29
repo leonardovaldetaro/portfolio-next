@@ -1,5 +1,3 @@
-// dark mode
-
 $dark-black: rgba(24, 24, 27, 1);
 $dark-gray: rgb(20, 32, 41);
 
@@ -9,11 +7,30 @@ $text-menu-dark: rgba(244, 244, 245, 1);
 
 $text-complements: rgba(39, 195, 243, 1);
 
-$card-hover: rgba(113, 113, 119, 0.1);
+$card-hover: rgba(84, 84, 90, 0.2);
 $text-card-badge: rgb(116, 203, 243);
+
+$menu-dark-bg: rgba(49, 61, 70, 0.6);
 
 
 $link-hover: rgb(193, 224, 236);
 $link-active: rgba(119, 197, 252, 1);
 
 // light mode
+
+$verde-eletrico: rgba(46, 213, 115, 1);
+$azul-vibrante: rgba(0, 168, 255, 1);
+$laranja-quente: rgba(255, 159, 67, 1);
+
+//Textos Tamanhos
+$title: 3em;
+$subtitle: 1.7em;
+$textBody: 1.2em;
+
+
+/* Color Theme Swatches in RGBA */
+$base-color-dark: rgba(1, 31, 38, 1);
+$base-color: rgba(29, 106, 115, 1);
+$base-color-light: rgba(27, 166, 166, 1);
+$base-color-lighter: rgba(42, 191, 176, 1);
+$base-color-eletric: rgba(17, 217, 160, 1);
