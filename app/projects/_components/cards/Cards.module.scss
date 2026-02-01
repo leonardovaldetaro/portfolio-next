@@ -1,0 +1,14 @@
+@use '../../../styles/variables' as var;
+@use '../../../styles/breakpoints' as bp;
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+
+    @media (max-width: bp.$desktop_sm) {
+        grid-template-columns: 1fr;
+    }
+}

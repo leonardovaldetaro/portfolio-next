@@ -1,5 +1,6 @@
 import HeroTop from "./_components/heroTop";
 import Styles from "./Projects.module.scss";
+import Cards from "./_components/cards";
 
 export default function Projects() {
     return (
@@ -8,7 +9,8 @@ export default function Projects() {
                 <HeroTop />
             </section>
             <section className={Styles.projects__projects}>
-                <h2 className={Styles.projects__projects__title}>Recent Projects</h2>
+                <h2 className={Styles.projects__projects__title}>All Projects</h2>
+                <Cards />
             </section>
         </main>
     );
